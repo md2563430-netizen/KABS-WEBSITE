@@ -1,45 +1,85 @@
-import { Tabs } from 'expo-router';
-import React from 'react';
-import { Platform } from 'react-native';
+import { Tabs } from "expo-router"
+import { StatusBar } from "expo-status-bar"
+import { Ionicons } from "@expo/vector-icons"
+import { SafeAreaProvider } from "react-native-safe-area-context"
 
-import { HapticTab } from '@/components/HapticTab';
-import { IconSymbol } from '@/components/ui/IconSymbol';
-import TabBarBackground from '@/components/ui/TabBarBackground';
-import { Colors } from '@/constants/Colors';
-import { useColorScheme } from '@/hooks/useColorScheme';
-
-export default function TabLayout() {
-  const colorScheme = useColorScheme();
-
+export default function RootLayout() {
   return (
-    <Tabs
-      screenOptions={{
-        tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
-        headerShown: false,
-        tabBarButton: HapticTab,
-        tabBarBackground: TabBarBackground,
-        tabBarStyle: Platform.select({
-          ios: {
-            // Use a transparent background on iOS to show the blur effect
-            position: 'absolute',
+    <SafeAreaProvider>
+      <StatusBar style="light" />
+      <Tabs
+        screenOptions={({ route }) => ({
+          tabBarIcon: ({ focused, color, size }) => {
+            let iconName: keyof typeof Ionicons.glyphMap = focused ? "home" : "home-outline"
+
+            if (route.name === "Home") {
+              iconName = focused ? "home" : "home-outline"
+            } else if (route.name === "Radio") {
+              iconName = focused ? "radio" : "radio-outline"
+            } else if (route.name === "Chat") {
+              iconName = focused ? "chatbubbles" : "chatbubbles-outline"
+            } else if (route.name === "Tv Hub") {
+              iconName = focused ? "tv" : "tv-outline"
+            } else if (route.name === "Shop") {
+              iconName = focused ? "cart" : "cart-outline"
+            }
+
+            return <Ionicons name={iconName} size={size} color={color} />
           },
-          default: {},
-        }),
-      }}>
-      <Tabs.Screen
-        name="index"
-        options={{
-          title: 'Home',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="house.fill" color={color} />,
-        }}
-      />
-      <Tabs.Screen
-        name="explore"
-        options={{
-          title: 'Explore',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="paperplane.fill" color={color} />,
-        }}
-      />
-    </Tabs>
-  );
+          initialRouteName: "Home",
+          tabBarActiveTintColor: "#FFD700",
+          tabBarInactiveTintColor: "#FFFFFF",
+          tabBarStyle: {
+            backgroundColor: "#8B0000",
+            borderTopWidth: 0,
+          },
+          headerStyle: {
+            backgroundColor: "#8B0000",
+          },
+          headerTintColor: "#FFFFFF",
+          headerTitleStyle: {
+            fontWeight: "bold",
+          },
+        })}
+      >
+        <Tabs.Screen
+          name="Home"
+          options={{
+            headerShown: false,
+          }}
+        />
+        <Tabs.Screen
+          name="Radio"
+          options={{
+            title: "Radio",
+          }}
+        />
+        <Tabs.Screen
+          name="Chat"
+          options={{
+            title: "Chat",
+          }}
+        />
+        <Tabs.Screen
+          name="Tv Hub"
+          options={{
+            title: "TV",
+          }}
+        />
+        <Tabs.Screen
+          name="Shop"
+          options={{
+            title: "Shop",
+          }}
+        />
+        <Tabs.Screen
+          name="index"
+          options={{
+            title: "Kabs Play",
+          }}
+        />
+      </Tabs>
+    </SafeAreaProvider>
+  )
 }
+
