@@ -39,12 +39,8 @@ export default function Button({
     disabled ? disabledStyles : ""
   }`;
 
-  // If href is provided, behave like a link button.
-  // If disabled, render a span so it cannot navigate.
   if (href) {
-    if (disabled) {
-      return <span className={combinedClassName}>{children}</span>;
-    }
+    if (disabled) return <span className={combinedClassName}>{children}</span>;
 
     return (
       <Link href={href} className={combinedClassName}>
