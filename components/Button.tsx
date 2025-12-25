@@ -3,37 +3,25 @@ import { ReactNode } from "react";
 
 type Variant = "primary" | "secondary" | "outline";
 
-type CommonProps = {
+interface ButtonProps {
   children: ReactNode;
+  href?: string;
+  onClick?: () => void;
   variant?: Variant;
   className?: string;
-};
-
-/**
- * Link-style button (when href is provided)
- */
-type LinkButtonProps = CommonProps & {
-  href: string;
-  disabled?: boolean; // Prevents navigation when true
-  onClick?: never;
-  type?: never;
-};
-
-/**
- * Native button (when href is NOT provided)
- */
-type NativeButtonProps = CommonProps & {
-  href?: undefined;
-  onClick?: () => void;
   type?: "button" | "submit" | "reset";
   disabled?: boolean;
-};
+}
 
-type ButtonProps = LinkButtonProps | NativeButtonProps;
-
-export default function Button(props: ButtonProps) {
-  const { children, variant = "primary", className = "" } = props;
-
+export default function Button({
+  children,
+  href,
+  onClick,
+  variant = "primary",
+  className = "",
+  type = "button",
+  disabled = false,
+}: ButtonProps) {
   const baseStyles =
     "px-6 py-3 rounded-xl font-semibold transition-all duration-300 inline-block text-center";
 
@@ -46,29 +34,24 @@ export default function Button(props: ButtonProps) {
       "bg-transparent border border-border text-text-primary hover:border-accent-gold hover:text-accent-gold",
   };
 
-  const isDisabled = "disabled" in props && !!props.disabled;
   const disabledStyles = "opacity-60 cursor-not-allowed pointer-events-none";
-
   const combinedClassName = `${baseStyles} ${variants[variant]} ${className} ${
-    isDisabled ? disabledStyles : ""
+    disabled ? disabledStyles : ""
   }`;
 
-  // LINK MODE
-  if ("href" in props && props.href) {
-    // If disabled, render as a <span> so it looks like a button but won't navigate.
-    if (props.disabled) {
+  // If href is provided, behave like a link button.
+  // If disabled, render a span so it cannot navigate.
+  if (href) {
+    if (disabled) {
       return <span className={combinedClassName}>{children}</span>;
     }
 
     return (
-      <Link href={props.href} className={combinedClassName}>
+      <Link href={href} className={combinedClassName}>
         {children}
       </Link>
     );
   }
-
-  // BUTTON MODE
-  const { onClick, type = "button", disabled } = props;
 
   return (
     <button
