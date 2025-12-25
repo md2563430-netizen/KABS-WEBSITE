@@ -34,5 +34,8 @@ yarn-error.*
 
 # typescript
 *.tsbuildinfo
+.next
+node_modules
+.env.local
 
 app-example

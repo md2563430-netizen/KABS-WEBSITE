@@ -8,7 +8,7 @@ interface ButtonProps {
   variant?: "primary" | "secondary" | "outline";
   className?: string;
   type?: "button" | "submit" | "reset";
-  disabled?: boolean; // ✅ ADD THIS
+  disabled?: boolean;
 }
 
 export default function Button({
@@ -18,7 +18,7 @@ export default function Button({
   variant = "primary",
   className = "",
   type = "button",
-  disabled = false, // ✅ ADD THIS
+  disabled = false,
 }: ButtonProps) {
   const baseStyles =
     "px-6 py-3 rounded-xl font-semibold transition-all duration-300 inline-block text-center";
@@ -36,7 +36,7 @@ export default function Button({
     disabled ? "opacity-60 cursor-not-allowed pointer-events-none" : ""
   }`;
 
-  // ✅ Link mode: if disabled, render span so it can't navigate
+  // Link mode: if disabled, render span so it can't navigate
   if (href) {
     if (disabled) {
       return <span className={combinedClassName}>{children}</span>;
@@ -52,7 +52,7 @@ export default function Button({
     <button
       type={type}
       onClick={onClick}
-      disabled={disabled} // ✅ ADD THIS
+      disabled={disabled}
       className={combinedClassName}
     >
       {children}
