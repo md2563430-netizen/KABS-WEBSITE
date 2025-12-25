@@ -224,11 +224,15 @@ export default function ComposePage({ params }: { params: { useCase: string } })
                     </div>
 
                     <div className="flex flex-col sm:flex-row gap-3 pt-2">
-                      <Link href={`/bulk-sms/${useCase}/confirm`} className="w-full">
-                        <Button variant="primary" className="w-full" disabled={draft.recipients.length === 0 || !draft.message.trim()}>
-                          Continue to Confirm
-                        </Button>
-                      </Link>
+                      <Button
+  href={`/bulk-sms/${useCase}/confirm`}
+  variant="primary"
+  className="w-full"
+  disabled={draft.recipients.length === 0 || !draft.message.trim()}
+>
+  Continue to Confirm
+</Button>
+
                       <Button
                         variant="outline"
                         type="button"
