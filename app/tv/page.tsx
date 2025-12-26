@@ -170,8 +170,8 @@ export default function TVPage() {
   const channels: TVChannel[] = [
     // Uganda (examples)
     {
-      id: 'nbs-ug',
-      name: 'NBS TV (UG)',
+      id: 'BUKEDDE TV1',
+      name: 'BUKEDDE TV1 (UG)',
       country: 'Uganda',
       city: 'Kampala',
       genre: 'News',
@@ -179,7 +179,7 @@ export default function TVPage() {
       live: true,
       logo: 'https://cdn.instant.audio/images/icon-stop.png',
       videoType: 'youtube',
-      videoUrl: 'https://www.youtube.com/@NBSTVUG/live',
+      videoUrl: 'https://stream.hydeinnovations.com/bukedde1flussonic/tracks-v2a1/mono.m3u8',
       description: 'Live news and updates.',
     },
     {
