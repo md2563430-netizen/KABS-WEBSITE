@@ -200,7 +200,7 @@ export default function TVPage() {
       name: 'BTV',
       country: 'Uganda',
       city: 'Kampala',
-      genre: 'News',
+      genre: 'Religious',
       featured: true,
       live: true,
       logo: 'https://yt3.googleusercontent.com/ytc/AIdro_l8o4Do2HIHM_T7DXOaQb7vPcuadOq8Sye5jt8rqHqLKw=s900-c-k-c0x00ffffff-no-rj',
