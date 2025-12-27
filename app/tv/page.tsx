@@ -275,13 +275,13 @@ export default function TVPage() {
  // Tanzania
     {
       id: 'Tanzania Safari Channel',
-      name: 'Sky News Live',
-      country: 'UK',
+      name: 'Tanzania Safari Channel',
+      country: 'Tanzania',
       genre: 'Documentary',
       live: true,
       logo: 'https://yt3.googleusercontent.com/-ransYdMF1dXWzSAF6m-GdotZvsQ0Ye0dXBtl3E26ts4FUORWi0AmnGa5I8WFO5PwlGUxeLT=s900-c-k-c0x00ffffff-no-rj',
       videoType: 'youtube',
-      videoUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTx5idGA-SpaKZq8rAVscyCnuIdBfIvpVIs9w&s',
+      videoUrl: 'https://stream-134630.castr.net/5fe35eae8c53540cab83659a/live_31dabe40323511f08b8efff0016f3b67/tracks-v1a1/mono.ts.m3u8',
       description: 'Live UK + world news.',
     },
     // Kenya / Africa (examples)
