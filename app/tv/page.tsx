@@ -234,7 +234,19 @@ export default function TVPage() {
       videoUrl: 'https://livestream.galaxytv.ug/jikonkone/chunklist_w1806517456.m3u8',
       description: 'Live music and top stories.',
     },
-
+     {
+      id: 'Spart TV',
+      name: 'Spark TV',
+      country: 'Uganda',
+      city: 'Kampala',
+      genre: 'Entertainment',
+      featured: true,
+      live: true,
+      logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9WO4t--ylUqL2NB0nII9c4jAImJW7812_BQ&s',
+      videoType: 'youtube',
+      videoUrl: 'https://customer-gllhkkbamkskdl1p.cloudflarestream.com/eyJhbGciOiJSUzI1NiIsImtpZCI6ImI3YmIwODNmMDhkNmQ5NWExZjIzZWE3ZWRhOWY4NTZhIn0.eyJzdWIiOiJiODI0YWYwNzM2MTg5M2NlNWVhNmRjNzM2MjdkMDlmOCIsImtpZCI6ImI3YmIwODNmMDhkNmQ5NWExZjIzZWE3ZWRhOWY4NTZhIiwiZXhwIjoxNzY2ODY4MTA2LCJhY2Nlc3NSdWxlcyI6W3sidHlwZSI6ImlwLmdlb2lwLmNvdW50cnkiLCJhY3Rpb24iOiJibG9jayIsImNvdW50cnkiOlsiUlUiLCJCWSJdfV19.HDMN3YZOwp5zq0u4FR7VUTR-z45s5RI4MwGkNZTGajSGSy-zaVR5tkXsqZnqtX7M5gyYSBWOpILQX-51NcESLMzChwtVW3tzGWGLtrHyBJvsxo8lNVITjFMKMMUy3CDBOSW8QvSdqTjJ0UrMdYTHaKVF0B3HpF9wvAXojC9OjFr5Qo2w_TEVAugVqca2uSAGOg0hTQqwuhIqTh0EyTr8k9DO1DW6l6XPt563C1VGZj1T8Vx5t1vktAhngQiwHu5TbEhOxxiDYMK5PNJjcOQ1LM-Dtvxc1PTGKsCPgWVmy4cafuUK1y_AW5NYQZZ2hV-vsf-2zFBg1ZL12DuuSXfuyg/manifest/stream_teb066d1a7ca7e6a49246cbbaf0589370_r1360488764.m3u8?llhlsHBs=0.9&CMCD=cid%3D%221766824904615%22%2Cmtp%3D3500%2Cot%3Dm%2Csf%3Dh%2Csid%3D%226b95ea41-176a-48ab-a443-7fa86c524504%22%2Csu',
+      description: 'Live music and entertainment.',
+    },
     // USA (examples)
     {
       id: 'abc-news-live',
