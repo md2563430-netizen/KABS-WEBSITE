@@ -260,6 +260,42 @@ export default function TVPage() {
       videoUrl: 'https://www.youtube.com/@SkyNews/live',
       description: 'Live UK + world news.',
     },
+    // UK (examples)
+    {
+      id: '90s 00s',
+      name: '90s',
+      country: 'UK',
+      genre: 'Entertainment',
+      live: true,
+      logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTx5idGA-SpaKZq8rAVscyCnuIdBfIvpVIs9w&s',
+      videoType: 'youtube',
+      videoUrl: 'https://amg01076-amg01076c19-rakuten-gb-8653.playouts.now.amagi.tv/ts-eu-w1-n2/playlist/amg01076-lightning-now90s00s-rakutengb/cb573d1e796c678f9cd43964cef84882847b3dcb0e6c886470af4a9765d97800dbe8ae84ae5b910c4c9e1fc061017d360439cd1dd56c49c1da63b820743c4b21fdcde00080dd0d0cb1df11292ca36265299a7369cc350f7bd2ec5a2f803ebe764c53cb017c593f88f258a9754cc59e0a957f39e8fc8b307b24455a9c5a43e6a64cb7ffe70f178d64a0b2011d977916fa83439fd401b3d5dd0d83128023f517c897a68bd317d0e4ab599975824e6912422ff9bab4f2a3529bd5806035907067135005a6eba4f740388950501cd6cb8bee35b14395c912886e61ef5bd857d264c32b8b19b7ed4b97a8b9f44b5576f1970c2f74f6a5e8a1d3011e912abbaee0d6763cbef3177348802dfb2a39379df88445d0905bc6f873cbe4292e39c6905792d2e7d0b8fede1cee50a0adc391334641741742d70dd0fd43ef698c28e69e6962362b63a29552c883a32e136a5d898d5b945e5b8ed28587d0192888073f5ffb6bcd541566ae613d9c84993344960a7366bc0b7d209a7149785b6917bdbfae/51/1920x1080_4716800/index.m3u8',
+      description: 'Live UK + muusic.',
+    },
+ // Tanzania
+    {
+      id: 'Tanzania Safari Channel',
+      name: 'Sky News Live',
+      country: 'UK',
+      genre: 'Documentary',
+      live: true,
+      logo: 'https://yt3.googleusercontent.com/-ransYdMF1dXWzSAF6m-GdotZvsQ0Ye0dXBtl3E26ts4FUORWi0AmnGa5I8WFO5PwlGUxeLT=s900-c-k-c0x00ffffff-no-rj',
+      videoType: 'youtube',
+      videoUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTx5idGA-SpaKZq8rAVscyCnuIdBfIvpVIs9w&s',
+      description: 'Live UK + world news.',
+    },
+    // Kenya / Africa (examples)
+    {
+      id: 'ktn',
+      name: 'KTN News',
+      country: 'Kenya',
+      genre: 'News',
+      live: true,
+      logo: 'https://cdn.instant.audio/images/icon-stop.png',
+      videoType: 'youtube',
+      videoUrl: 'https://www.youtube.com/@KTNNewsKE/live',
+      description: 'Kenya and global updates.',
+    },
 
     // Kenya / Africa (examples)
     {
