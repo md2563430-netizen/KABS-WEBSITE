@@ -223,7 +223,7 @@ export default function TVPage() {
     },
     {
       id: 'Galaxy TV',
-      name: 'BGalaxy TV',
+      name: 'Galaxy TV',
       country: 'Uganda',
       city: 'Kampala',
       genre: 'Entertainment',
